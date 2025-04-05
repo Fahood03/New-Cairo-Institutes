@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8"> <!-- تعيين ترميز الأحرف لضمان دعم العربية -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ضبط العرض للأجهزة المختلفة -->
+    <title>معهد القاهرة الجديدة</title> <!-- عنوان الصفحة في شريط المتصفح -->
+    <style>
+        body 
+        { 
+            background: linear-gradient(45deg,gray, #ff0099, purple, #493240, #00c9ff, yellow, black, red, rgba(165, 42, 42, 0.139), green, blue, white, gold, orange, silver); /*الوان الخلفيه و تقسيمتها تحتها*/
+            background-size: 600% 600%;
+            animation: gradientBG 20s ease infinite; /*سرعة الخلفية*/
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif; /* تحديد نوع الخط */
+            margin: 0; /* إزالة الهوامش الافتراضية */
+            padding: 0; /* إزالة الحشوات الافتراضية */
+            direction: rtl; /* جعل اتجاه النص من اليمين إلى اليسار */
+            text-align: center; /* توسيط النصوص */
+            
+            scroll-behavior: smooth; /* جعل الانتقال بين الأقسام سلسًا */
+        }
+
+        @keyframes gradientBG       /*الخلفية تتحرك*/
+         {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header 
+        { 
+            background: linear-gradient(90deg, blue, #f90303,blue); /* تدرج لوني للخلفية */
+            color: white; /* لون النص */
+            padding: 20px; /* إضافة مسافة داخلية */
+            position: fixed; /* تثبيت الهيدر أثناء التمرير */
+            width: 100%; /* جعله يغطي العرض بالكامل */
+            top: 0; /* تثبيته في أعلى الصفحة */
+            z-index: 1000; /* التأكد من أنه فوق باقي العناصر */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* إضافة ظل */
+        }
+
+        nav ul { 
+            list-style: none; /* إزالة التعداد النقطي */
+            padding: 0; /* إزالة الحشوات */
+            margin: 0; /* إزالة الهوامش */
+        }
+
+        nav ul li { 
+            display: inline; /* عرض العناصر بجانب بعضها أفقيًا */
+            margin: 0 15px; /* إضافة مسافة بين العناصر */
+        }
+
+        nav ul li a { 
+            color: white; /* لون الروابط */
+            text-decoration: none; /* إزالة التسطير */
+            font-weight: bold; /* جعل النص عريضًا */
+            transition: 0.3s; /* جعل التغييرات سلسة */
+        }
+
+        nav ul li a:hover {
+            color: black; /* تغيير لون الرابط عند التمرير */
+            background-color: chartreuse;
+            font-size: 30px;
+
+        }
+
+        section,.section6,.section9 
+        { 
+            padding: 80px 20px; /* إضافة مسافة داخلية */
+            margin: 100px auto; /* محاذاة وسطية وإضافة هوامش */
+            width: 80%; /* تحديد عرض المحتوى */
+            height: 1000px;
+            background: bisque; /* خلفية بيضاء */
+            border-radius: 10px; /* تدوير الزوايا */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            opacity: 0; /* إخفاء الأقسام افتراضيًا */
+            transform: translateY(30px); /* تحريكها لأسفل */
+            animation: fadeIn 1s ease-in-out forwards; /* تطبيق أنيميشن الظهور */
+        }
+
+        .section1
+        { 
+            padding: 80px 20px; /* إضافة مسافة داخلية */
+            margin: 100px auto; /* محاذاة وسطية وإضافة هوامش */
+            width: 80%; /* تحديد عرض المحتوى */
+            height: 430px;
+            background:bisque;  /* خلفية بيضاء */
+            border-radius: 10px; /* تدوير الزوايا */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            opacity: 0; /* إخفاء الأقسام افتراضيًا */
+            transform: translateY(30px); /* تحريكها لأسفل */
+            animation: fadeIn 1s ease-in-out forwards; /* تطبيق أنيميشن الظهور */
+        }
+
+
+        .section2
+        { 
+            padding: 80px 20px; /* إضافة مسافة داخلية */
+            margin: 100px auto; /* محاذاة وسطية وإضافة هوامش */
+            width: 80%; /* تحديد عرض المحتوى */
+            height: 670px;
+            background: bisque; /* خلفية بيضاء */
+            border-radius: 10px; /* تدوير الزوايا */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            opacity: 0; /* إخفاء الأقسام افتراضيًا */
+            transform: translateY(30px); /* تحريكها لأسفل */
+            animation: fadeIn 1s ease-in-out forwards; /* تطبيق أنيميشن الظهور */
+        }
+
+        .section3
+        { 
+            padding: 80px 20px; /* إضافة مسافة داخلية */
+            margin: 100px auto; /* محاذاة وسطية وإضافة هوامش */
+            width: 80%; /* تحديد عرض المحتوى */
+            height: 900px;
+            background: bisque; /* خلفية بيضاء */
+            border-radius: 10px; /* تدوير الزوايا */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            opacity: 0; /* إخفاء الأقسام افتراضيًا */
+            transform: translateY(30px); /* تحريكها لأسفل */
+            animation: fadeIn 1s ease-in-out forwards; /* تطبيق أنيميشن الظهور */
+        }
+
+        .section4
+        { 
+            padding: 80px 20px; /* إضافة مسافة داخلية */
+            margin: 100px auto; /* محاذاة وسطية وإضافة هوامش */
+            width: 80%; /* تحديد عرض المحتوى */
+            height: 11000px;
+            background: bisque; /* خلفية بيضاء */
+            border-radius: 10px; /* تدوير الزوايا */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            opacity: 0; /* إخفاء الأقسام افتراضيًا */
+            transform: translateY(30px); /* تحريكها لأسفل */
+            animation: fadeIn 1s ease-in-out forwards; /* تطبيق أنيميشن الظهور */
+        }
+
+        .section5
+        { 
+            padding: 80px 20px; /* إضافة مسافة داخلية */
+            margin: 100px auto; /* محاذاة وسطية وإضافة هوامش */
+            width: 80%; /* تحديد عرض المحتوى */
+            height: 1900px;
+            background: bisque; /* خلفية بيضاء */
+            border-radius: 10px; /* تدوير الزوايا */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            opacity: 0; /* إخفاء الأقسام افتراضيًا */
+            transform: translateY(30px); /* تحريكها لأسفل */
+            animation: fadeIn 1s ease-in-out forwards; /* تطبيق أنيميشن الظهور */
+        }
+
+        .section7
+        { 
+            padding: 80px 20px; /* إضافة مسافة داخلية */
+            margin: 100px auto; /* محاذاة وسطية وإضافة هوامش */
+            width: 80%; /* تحديد عرض المحتوى */
+            height: 800px;
+            background: bisque; /* خلفية بيضاء */
+            border-radius: 10px; /* تدوير الزوايا */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            opacity: 0; /* إخفاء الأقسام افتراضيًا */
+            transform: translateY(30px); /* تحريكها لأسفل */
+            animation: fadeIn 1s ease-in-out forwards; /* تطبيق أنيميشن الظهور */
+        }
+
+        .section8
+        { 
+            padding: 80px 20px; /* إضافة مسافة داخلية */
+            margin: 100px auto; /* محاذاة وسطية وإضافة هوامش */
+            width: 80%; /* تحديد عرض المحتوى */
+            height: 850px;
+            background: bisque; /* خلفية بيضاء */
+            border-radius: 10px; /* تدوير الزوايا */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            opacity: 0; /* إخفاء الأقسام افتراضيًا */
+            transform: translateY(30px); /* تحريكها لأسفل */
+            animation: fadeIn 1s ease-in-out forwards; /* تطبيق أنيميشن الظهور */
+        }
+
+        @keyframes fadeIn { /*ده بيخلي الكلام في الصفحة يظهر*/
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {  /*أسفل الصفحة*/
+            background: #222; /* لون خلفية الفوتر */
+            color: white; /* لون النص */
+            padding: 20px; /* مسافة داخلية */
+            margin-top: 20px; /* إضافة هامش علوي */
+            text-align: center; /* توسيط النص */
+        }
+
+        .title /*الكلمة اللي فوق خالص في الصفحة */
+        {
+            color:black;
+            border-bottom: 5px solid black;
+            width: 700px;
+            position: relative;
+            right: 230px;
+        }
+
+        .SN /*قائمة البيانات بتاعت قسم اسم الطالب*/
+        {
+            font-size: 30px;
+            direction: rtl;
+            position: absolute;
+            right: 100px;
+            top: 150px;
+            text-align: right;
+        }
+
+        .AN /* قائمة البيانات قسم اعضاء مجلس الادارة*/
+        {
+            font-size: 30px;
+            direction: rtl;
+            position: absolute;
+            right: 30px;
+            top: 150px;
+            text-align: right;
+        }
+
+        .IN /*قائمة البيانات قسم عن المعهد*/
+        {
+            font-size: 30px;
+            direction: rtl;
+            position: absolute;
+            right: 30px;
+            top: 150px;
+            text-align: right;
+        }
+
+        .SJN /* قائمة البيانات قسم أقسام المعهد و المواد الدراسية*/
+        {
+            font-size: 30px;
+            direction: rtl;
+            position: absolute;
+            right: 30px;
+            top: 150px;
+            text-align: right;
+        }
+
+        .INT /*قائمة البيانات قسم التقديم */
+        {
+            font-size: 30px;
+            direction: rtl;
+            position: absolute;
+            right: 30px;
+            top: 250px;
+            text-align: right;
+        }
+
+        .h1 /*الكلمة الكبيرة اللي فوق في صفحة البيانات*/
+        {
+            font-size: 50px;
+            position: absolute;
+            top: 120px;
+            right: 420px;
+            border: 7px ridge black;
+            background-color: aquamarine;
+        }
+
+        .h2 /*الكلمة الكبيرة اللي فوق في صفحة اعضاء مجلس الإدارة*/
+        {
+            font-size: 50px;
+            position: absolute;
+            top: 120px;
+            right: 360px;
+            border: 7px ridge black;
+            background-color: aquamarine;
+        }
+
+        .h3 /*الكلمة الكبيرة اللي فوق في صفحة عن المعهد*/
+        {
+            font-size: 50px;
+            position: absolute;
+            top: 120px;
+            right: 430px;
+            border: 7px ridge black;
+            background-color: aquamarine;
+        }
+
+        .h4 /*الكلمة الكبيرة اللي فوق في صفحة أقسام المعهد و المواد الدراسية */
+        {
+            font-size: 50px;
+            position: absolute;
+            top: 120px;
+            right: 270px;
+            border: 7px ridge black;
+            background-color: aquamarine;
+        }
+
+        .h5 /*الكلمة الكبيرة اللي فوق في صفحة   التقديم   */
+        {
+            font-size: 50px;
+            position: absolute;
+            top: 120px;
+            right: 480px;
+            border: 7px ridge black;
+            background-color: aquamarine;
+        }
+
+        .h6 /*الكلمة الكبيرة اللي فوق في صفحة   التقديم   */
+        {
+            font-size: 50px;
+            position: absolute;
+            top: 120px;
+            right: 480px;
+            border: 7px ridge black;
+            background-color: aquamarine;
+        }
+
+        .h7 /*الكلمة الكبيرة اللي فوق في صفحة   التواصل   */
+        {
+            font-size: 50px;
+            position: absolute;
+            top: 120px;
+            right: 400px;
+            border: 7px ridge black;
+            background-color: aquamarine;
+        }
+
+        .img1/* الصورة بتاعت المعهد*/
+        {
+            width: 550px;
+            position: absolute;
+            right: 420px;
+            top: 480px;
+            border: 5px solid black;
+        }
+
+        .li /*قسم عن المعهد*/
+        {
+            font-size: 21px;
+            position: absolute;
+            right: 100px;
+            line-height: 5px;
+        }
+
+        .li1 /* أقسام المعهد المواد الدراسية */
+        {
+            font-size: 20px;
+            position: relative;
+            right: 300px;
+            line-height: 1px;
+            direction: ltr;
+            text-align: left;
+        }
+        .li2 /* أقسام المعهد المواد الدراسية */
+        {
+            font-size: 20px;
+            position: relative;
+            right: 150px;
+            line-height: 1px;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .li3 /* أقسام المعهد التقديم  */
+        {
+            font-size: 20px;
+            position: relative;
+            top: 30px;
+            right: 50px;
+            line-height: 1px;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .A /* أقسام المعهد المواد الدراسية */
+        {
+            border-bottom: 3px solid black;
+        }
+
+        .R /*الكلام الاحمر*/
+        {
+            font-size: 25px;
+            color: red;
+            border-bottom: 5px solid red;
+        }
+
+        .books /*الكتب*/
+        {
+            font-size: 20px;
+            color: blue;
+            text-decoration: none;
+        }
+        
+        .fac /*فيس بوك*/
+        {
+           width: 100px;
+           position: absolute;
+           top: 290px;
+           right: 60px;
+           border: 1px solid blue;
+           border-radius: 40px;
+        }
+        .fac:hover
+        {
+            transform: scale(1.2); /* تكبير الأيقونة */
+            filter: drop-shadow(0 0 10px rgba(0, 0, 255, 0.5)); /* إضافة توهج */
+        }
+
+        .you /*يوتيوب */
+        {
+           width: 200px;
+           height: 100px;
+           position: absolute;
+           top: 290px;
+           right: 240px;
+        }
+        .you:hover
+        {
+            transform: scale(1.2); /* تكبير الأيقونة */
+            filter: drop-shadow(0 0 10px rgb(231, 7, 7)); /* إضافة توهج */
+        }
+
+        .tel /*تيليجرام */
+        {
+           width: 200px;
+           height: 100px;
+           position: absolute;
+           top: 290px;
+           right: 470px;
+        }
+        .tel:hover
+        {
+            transform: scale(1.2); /* تكبير الأيقونة */
+            filter: drop-shadow(0 0 10px rgb(41, 194, 255)); /* إضافة توهج */
+        }
+
+        .ins /*انستغرام */
+        {
+           width: 100px;
+           height: 100px;
+           position: absolute;
+           top: 290px;
+           right: 700px;
+        }
+        .ins:hover
+        {
+            transform: scale(1.2); /* تكبير الأيقونة */
+            filter: drop-shadow(0 0 10px rgb(229, 0, 254)); /* إضافة توهج */
+        }
+
+        .gma /* جيميل */
+        {
+           width: 100px;
+           height: 100px;
+           position: absolute;
+           top: 290px;
+           right: 880px;
+        }
+        .gma:hover
+        {
+            transform: scale(1.2); /* تكبير الأيقونة */
+            filter: drop-shadow(0 0 10px rgb(236, 88, 88)); /* إضافة توهج */
+        }
+
+        .W   /*  قسم التواصل */
+        {
+            font-size: 30px;
+            font-weight: bold;
+            border-bottom: 2px solid;
+            position: absolute;
+            top: 500px;
+            right: 110px;
+        }
+        
+        .li4
+        {
+            font-size: 20px;
+            position: relative;
+            top: 450px;
+            right: 150px;
+            line-height: 15px;
+            direction: rtl;
+            text-align: right;
+            
+        }
+
+        .WO   /*  قسم التواصل */
+        {
+            font-size: 30px;
+            font-weight: bold;
+            border-bottom: 2px solid;
+            position: absolute;
+            top: 800px;
+            right: 110px;
+            color: red;
+        }
+
+        .word   /*  قسم التواصل */
+        {
+            font-size: 30px;
+            font-weight: bold;
+            border-bottom: 2px solid;
+            position: absolute;
+            top: 850px;
+            right: 110px;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="title">معهد القاهرة الجديدة العالي للعلوم الإدارية و الحاسب الآلي</h1> <!-- عنوان المعهد -->
+        <nav><!-- الكلام اللي فوق زي شريط المهام اللي بختار منه -->
+            <ul>
+                <li><a href="#contact3">بيانات الطالب</a></li>
+                <li><a href="#about"> اعضاء مجلس الإدارة</a></li>
+                <li><a href="#courses">عن المعهد</a></li>
+                <li><a href="#subjects">  أقسام المعهد و المواد الدراسية</a></li>
+                <li><a href="#contact1">التقديم </a></li>
+                <li><a href="#contact2">اللوكيشن </a></li>
+                <li><a href="#contact4">  الكتب </a></li>
+                <li><a href="#contact"> اتصل بنا </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact3" class="section1">
+        <h1 class="h1">بيانات الطالب</h1> <!-- قسم  بيانات الطالب -->
+        <div class="SN">
+            <br>
+            <br>
+            <br>
+            الإسم : 
+            <span class="names">
+            فهد أحمد عفت عبد المحسن
+            <br>
+            عبدالرحمن صلاح عبد الفتاح
+            <br>
+            محمد أحمد منوفي
+            <br>
+            عبدالرحمن جمال حافظ 
+            <br>
+            <br>
+            <br>
+            </span>
+            الفرقة : الثانية
+            <br>
+           المعهد : القاهرة الجديدة
+            <br>
+            الشعبة : نظم و معلومات إدارية
+            <br>
+        
+        </div>
+        
+    </section>
+
+    <section id="about" class="section2">
+        <h2 class="h2"> أعضاء مجلس الإدارة</h2> <!-- قسم  اعضاء مجلس الادارة -->
+        <div class="AN">
+            <br>
+            <br>
+            <br>
+            د / محمد توفيق محمد -- استاذ المحاسبة و المراجعة كلية التجارة جامعة عين شمس رئيس مجلس الادارة - عميد المعهد سابقاً
+            <br>
+            <br>
+            أ.د / أحمد السيد عبد اللطيف -- استاذ الاقتصاد و المالية العامة - عميد المعهد عضو مجلس الإدارية
+            <br>
+            <br>
+            أ / مدحت فارس دانيال - الاميم العام عضو مجلس الادارة
+            <br>
+            <br>
+            أ.د / مصطفى جلال مصطفى -- استاذ الاحصاء و الرياضة و التامين - كلية التجارة - جامعة عين شمس عضو مجلس الإدارة - عميد المعهد سابقاً
+            <br>
+            <br>
+            أ.د / ايهاب عز الدين نديم -- استاذ الاقتصاد - كليه التجارة - جامعة عين شمس  عضو مجلس الادارة\
+            <br>
+            <br>
+            أ.د / محمد زيدان ابراهيم -- استاذ المحاسبة - كلية التجارة - جامعة المنوفية عضو مجلس الادارة - عميد المعهد سابقاً
+            <br>
+            <br>
+            أ.د / كمال حسين احمد ابراهيم -- استاذ المحاسبة - كلية التجارة - جامعة عين شمس عضو مجلس الادارة
+        </div>
+    </section>
+
+    <section id="courses" class="section3">
+        <h2 class="h3"> عن المعهد</h2> <!-- قسم عن المعهد -->
+        <div class="IN">
+                <br>
+                <br>
+                <br>
+              تم إنشاء معهد القاهرة الجديدة للعلوم الإدارية و الحاسب الآلي بالمجاورة السابعة - التجمع الأول - مدينة القاهرة الجديدة  
+                <br>
+               التابع لجمعية العلم الحديث للثقافة ( أكاديمية عين شمس )  سابقا بقرار وزاري رقم (843) بتاريخ 9/6/2002 و يتكون المعهد من ثلاث شعب :
+                <br>
+            <ul>
+               أرقام طوابع التنسيق الخاصة بالمعهد :
+                <br>
+                <br>
+            <li class="li">
+                شعبة نظم المعلومات الإدارية : طابع تنسيق رقم 247/_
+            </li>
+                <br>
+            <li class="li">
+                شعبة الإدارة باللغة العربية (تجارة عربي) : طابع تنسيق رقم 8/248
+            </li>
+                <br>
+            <li class="li">
+                شعبة الإدارة باللغة الإنجليزية (تجارة انجليزي) : طابع التنسيق رقم 8/248
+            </li>
+                <br>
+            <li class="li">
+                شعبة التسويق و التجارة الخارجية : طابع تنسيق رقم 7/632
+            </li>
+            </ul>
+            <img src="data:image/jpeg;base64,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" alt="institute" class="img1">
+                و جميع الشعب معادلة لدرجة البكالوريوس
+                <br>
+                 التي تمنحها الجامعات المصرية الخاضعة
+                 <br>
+                  لقانون تنظيم الجامعات رقم (49) لسنة
+                <br>
+                   1972 و لائحته التنفيذية في التخصصات
+                <br>
+                    المناظرة .
+                <br>
+                <br>
+                و يتم قبول الطلاب بالمعهد عن طريق مكتب تنسيق القبول بالجامعات و المعاهد . أما بالنسبة لمدة الدراسة بالمعهد فهى اربع سنوات دراسية . يمنح من يجتازها بنجاح درجة البكالوريوس في شعب التخصص و يعتمد هذا المؤهل من السيد الأستاذ الدكتور وزير التعليم العالي . كما يلتزم المعهد بتطبيق كافة الخطط الدراسية التي أقرها المجلي الأعلى للجامعات و لجنة القطاع المختصة .
+    </div>
+    </section>
+
+    <section id="subjects" class="section4">
+        <h2 class="h4">اقسام المعهد و المواد الدراسية </h2> <!-- قسم أقسام المعهد المواد الدراسية -->
+        <div class="SJN">
+            <br>
+            <br>
+            <br>
+            <span class="A"> شعبة نظم معلومات إدارية : </span>
+                <br>
+                <ul>
+                   <ol> الفرقة الأولى :</ol>
+                   <ol>   الفصل الدراسي الأول:</ol>
+                   <br>
+                    <li class="li2"> مقدمة في الحاسبات   </li>
+                        <br>
+                    <li class="li2"> مقدمة في نظم التشغيل </li>
+                        <br>
+                    <li class="li2"> مبادئ الاقتصاد </li>
+                        <br>
+                    <li class="li2">  مبادئ تنظيم الادارة  </li>
+                        <br>
+                    <li class="li2">  ادارة عامة   </li>
+                        <br>
+                    <li class="li2">  مراسلات و مصطلحات باللغة الانجليزية  </li>
+                        <br>
+                    <ol>   الفصل الدراسي الثاني: </ol>
+                        <br>
+                    <li class="li2"> أساسيات البرمجة الهيكلية  </li>
+                        <br>
+                    <li class="li2"> حزم التطبيقات المكتبية </li>
+                        <br>
+                    <li class="li2"> مبادئ المحاسبة </li>
+                        <br>
+                    <li class="li2">   الرياضة و التأمين </li>
+                        <br>
+                    <li class="li2">  مبادئ السلوك التنظيمي   </li>
+                        <br>
+                    <li class="li2"> مراسلات و مصطلحات باللغة الانجليزية  </li>
+                        <br>
+                        <br>
+                    <hr width="150%" color="red">
+                
+                    الفرقة الثانية :
+                   <ol>   الفصل الدراسي الأول: </ol>
+                   <br>
+                    <li class="li2"> قواعد بيانات (1) </li>
+                        <br>
+                    <li class="li2"> البرمجة الهيكلية المتقدمة </li>
+                        <br>
+                    <li class="li2"> محاسبة شركات </li>
+                        <br>
+                    <li class="li2">  ادارة الانتاج </li>
+                        <br>
+                    <li class="li2">   قانون تجاري  </li>
+                        <br>
+                    <li class="li2"> دراسات اقتصادية باللغة الانجليزية </li>
+                        <br>
+                    <ol>   الفصل الدراسي الثاني: </ol>
+                        <br>
+                    <li class="li2"> نظم المعلومات الادارية  </li>
+                        <br>
+                    <li class="li2"> تطبيقات الانترنت و الوسائط المتعددة </li>
+                        <br>
+                    <li class="li2">  تسويق  </li>
+                        <br>
+                    <li class="li2">  رياضيات التمويل </li>
+                        <br>
+                    <li class="li2">  احصاء  </li>
+                        <br>
+                    <li class="li2">  دراسات اقتصادية باللغة الانجليزية </li>
+                    <br>
+                    <br>
+                    <hr width="150%" color="red">
+                        الفرقة الثالثة :
+                       <ol>الفصل الدراسي الأول: </ol>
+                       <br>
+                        <li class="li2">  قواعد بيانات (2) </li>
+                            <br>
+                        <li class="li2"> الاحصاء و حزم بحوث العمليات (احزمة) </li>
+                            <br>
+                        <li class="li2"> محاسبة الضرائب </li>
+                            <br>
+                        <li class="li2">  اقتصاد كلي </li>
+                            <br>
+                        <li class="li2">  محاسبة تكاليف  </li>
+                            <br>
+                        <li class="li2">  دراسات ادارية باللغة الانجليزية </li>
+                            <br>
+                        <ol>   الفصل الدراسي الثاني: </ol>
+                            <br>
+                        <li class="li2"> تحليل و تصميم نظم المعلومات  </li>
+                            <br>
+                        <li class="li2"> التسويق و التجارة الالكترونية </li>
+                            <br>
+                        <li class="li2"> ادارة المشتريات و المخازن  </li>
+                            <br>
+                        <li class="li2">   اقتصاد كلي </li>
+                            <br>
+                        <li class="li2">  محاسبة تكاليف  </li>
+                            <br>
+                        <li class="li2"> دراسات ادارية باللغة الانجليزية </li>
+                        <br>
+                        <br>
+                        <hr width="150%" color="red">
+                            الفرقة الرابعة :
+                             <ol> الفصل الدراسي الأول: </ol>
+                           <br>
+                            <li class="li2">  نظم دعم القرار   </li>
+                                <br>
+                            <li class="li2"> شبكات و امن المعلومات </li>
+                                <br>
+                            <li class="li2"> ادارة افراد </li>
+                                <br>
+                            <li class="li2">  محاسبة ادارية </li>
+                                <br>
+                            <li class="li2">  دراسات محاسبية باللغة الانجليزية   </li>
+                                <br>
+                            <li class="li2"> مشروع التخرج </li>
+                                <br>
+                            <ol>   الفصل الدراسي الثاني: </ol>
+                                <br>
+                            <li class="li2"> تطبيقات الحاسب في اعداد التقارير </li>
+                                <br>
+                            <li class="li2"> نظم معلومات محاسبية </li>
+                                <br>
+                            <li class="li2"> ادارة المؤسسات المالية و التمويل </li>
+                                <br>
+                            <li class="li2">  دراسات جدوى اقتصادية </li>
+                                <br>
+                            <li class="li2">  دراسات محاسبية باللغة الانجليزية  </li>
+                                <br>
+                            <li class="li2">  مشروع التخرج  </li>
+                            <br>
+                            <br>
+                            <hr width="150%" color="black">
+<span class="A"> شعبة إدارة باللغة الإنجليزية : </span>
+        <ul>
+           <ol> الفرقة الأولى :</ol>
+           <ol>   الفصل الدراسي الأول: </ol>
+           <br>
+            <li class="li1"> Principles Of Management </li>
+                <br>
+            <li class="li1"> Principles Of Accounting </li>
+                <br>
+            <li class="li1"> Principles Of Economics | </li>
+                <br>
+            <li class="li1">   Mathematics </li>
+                <br>
+            <li class="li1">  Psychology  </li>
+                <br>
+            <li class="li1">  Commercial Studies In a Foreign Language  </li>
+                <br>
+            <ol>   الفصل الدراسي الثاني: </ol>
+                <br>
+            <li class="li1"> Puplic Administration</li>
+                <br>
+            <li class="li1"> Principles Of Accounting ||</li>
+                <br>
+            <li class="li1"> Micro Economic Analysis | </li>
+                <br>
+            <li class="li1">   Economic Resources & Economic Development </li>
+                <br>
+            <li class="li1">  Principles Of Low  </li>
+                <br>
+            <li class="li1">  Commercial Studies In a Foreign Language  </li>
+                <br>
+                <br>
+            <hr width="150%" color="red">
+        <ul>
+            الفرقة الثانية :
+           <ol>   الفصل الدراسي الأول: </ol>
+           <br>
+            <li class="li1">  Operation and Production Management  </li>
+                <br>
+            <li class="li1"> Macro-economic Analysis </li>
+                <br>
+            <li class="li1"> Mathematics Of Finance</li>
+                <br>
+            <li class="li1">   Intermediate Accounting | </li>
+                <br>
+            <li class="li1">  Marketing  </li>
+                <br>
+            <li class="li1">  Commercial Studies In a Foreign Language (Accounting) </li>
+                <br>
+            <ol>   الفصل الدراسي الثاني: </ol>
+                <br>
+            <li class="li1"> Commercial Low</li>
+                <br>
+            <li class="li1"> Materials Management</li>
+                <br>
+            <li class="li1"> Economics Of Money banking and Foreign Trade</li>
+                <br>
+            <li class="li1">   Intermediate Accounting || </li>
+                <br>
+            <li class="li1">  Introduction To Statistical Methods  </li>
+                <br>
+            <li class="li1">  Taxation Accounting</li>
+            <br>
+            <br>
+            <hr width="150%" color="red">
+                الفرقة الثالثة :
+               <ol>الفصل الدراسي الأول: </ol>
+               <br>
+                <li class="li1">  Management Of Human Resources </li>
+                    <br>
+                <li class="li1"> Government Accounting & non- Ptofit Organizations </li>
+                    <br>
+                <li class="li1"> Principles Of Cost Accounting </li>
+                    <br>
+                <li class="li1">   International Economics</li>
+                    <br>
+                <li class="li1">  Computer Applications  </li>
+                    <br>
+                <li class="li1">  Feasibility Study & project Evaluation </li>
+                    <br>
+                <ol>   الفصل الدراسي الثاني: </ol>
+                    <br>
+                <li class="li1"> Financial Management </li>
+                    <br>
+                <li class="li1"> Principles Of Auditing </li>
+                    <br>
+                <li class="li1"> Managerial Accounting </li>
+                    <br>
+                <li class="li1">   Puplic Finance & Taxation </li>
+                    <br>
+                <li class="li1">  Applied Statistics  </li>
+                    <br>
+                <li class="li1"> Budgeting </li>
+                <br>
+                <br>
+                <hr width="150%" color="red">
+                    الفرقة الرابعة :
+                     <ol> الفصل الدراسي الأول: </ol>
+                   <br>
+                    <li class="li1">  Financial Market & Institutions  </li>
+                        <br>
+                    <li class="li1"> Advanced Statistics </li>
+                        <br>
+                    <li class="li1"> Economic Development </li>
+                        <br>
+                    <li class="li1">  Modern Accounting Problems </li>
+                        <br>
+                    <li class="li1">  Accounting Information Systems  </li>
+                        <br>
+                    <li class="li1"> Specialized Corporations Accounting </li>
+                        <br>
+                    <ol>   الفصل الدراسي الثاني: </ol>
+                        <br>
+                    <li class="li1"> Operation Research </li>
+                        <br>
+                    <li class="li1"> Applied Economics </li>
+                        <br>
+                    <li class="li1"> Accounting Of Financial Institutions </li>
+                        <br>
+                    <li class="li1">  Cost Accounting Systems </li>
+                        <br>
+                    <li class="li1">  Taxation Accounting  </li>
+                        <br>
+                    <li class="li1">  Advanced Auditing </li>
+                    <br>
+                    <br>
+            <hr width="150%" color="black">
+
+<span class="A"> شعبة إدارة باللغة العربية : </span>
+            <br>
+            <br>
+            <ul>
+               <ol> الفرقة الأولى :</ol>
+               <ol>   الفصل الدراسي الأول:</ol>
+               <br>
+                <li class="li2"> مبادئ الادارة  </li>
+                    <br>
+                <li class="li2"> مبادئ المحاسبة | </li>
+                    <br>
+                <li class="li2"> مبادئ الاقتصاد </li>
+                    <br>
+                <li class="li2">   الرياضة البحتة* </li>
+                    <br>
+                <li class="li2">  العلوم السلوكية  </li>
+                    <br>
+                <li class="li2">  قراءات متخصصة باللغة(ادارة)  </li>
+                    <br>
+                <ol>   الفصل الدراسي الثاني: </ol>
+                    <br>
+                <li class="li2"> الادارة العامة </li>
+                    <br>
+                <li class="li2"> مبادئ المحاسبة || </li>
+                    <br>
+                <li class="li2"> تحليل اقتصادى جزئى </li>
+                    <br>
+                <li class="li2">   اقتصاديات الموارد و التطور الاقتصادي </li>
+                    <br>
+                <li class="li2">  مبادئ القانون   </li>
+                    <br>
+                <li class="li2"> قراءات متخصصة باللغة (اقتصاد)  </li>
+                    <br>
+                    <br>
+                <hr width="150%" color="red">
+            
+                الفرقة الثانية :
+               <ol>   الفصل الدراسي الأول: </ol>
+               <br>
+                <li class="li2">  ادارة الانتاج و العمليات  </li>
+                    <br>
+                <li class="li2"> تحليل اقتصادى كلى </li>
+                    <br>
+                <li class="li2"> رياضيات المال و الاستثمار </li>
+                    <br>
+                <li class="li2">  محاسبة متوسطة | </li>
+                    <br>
+                <li class="li2">  التسويق  </li>
+                    <br>
+                <li class="li2"> قراءات متخصصة باللغة (محاسبة) </li>
+                    <br>
+                <ol>   الفصل الدراسي الثاني: </ol>
+                    <br>
+                <li class="li2"> قانون تجاري </li>
+                    <br>
+                <li class="li2"> ادارة المواد </li>
+                    <br>
+                <li class="li2"> اقتصاديات نقود و بنوك و تجارة خارجية </li>
+                    <br>
+                <li class="li2">  محاسبة متوسطة || </li>
+                    <br>
+                <li class="li2">  مقدمة في الطرق الاحصائية  </li>
+                    <br>
+                <li class="li2">  محاسبة ضريبة </li>
+                <br>
+                <br>
+                <hr width="150%" color="red">
+                    الفرقة الثالثة :
+                   <ol>الفصل الدراسي الأول: </ol>
+                   <br>
+                    <li class="li2">  ادارة الموارد البشرية </li>
+                        <br>
+                    <li class="li2"> محاسبة حكومية و هيئات غير هادفة للربح </li>
+                        <br>
+                    <li class="li2"> اصول التكاليف </li>
+                        <br>
+                    <li class="li2">  الاقتصاد الدولى </li>
+                        <br>
+                    <li class="li2">  تطبيقات الحاسب الآلي  </li>
+                        <br>
+                    <li class="li2">  دراسة جدوى و تقييم المشروعات </li>
+                        <br>
+                    <ol>   الفصل الدراسي الثاني: </ol>
+                        <br>
+                    <li class="li2"> الادارة المالية </li>
+                        <br>
+                    <li class="li2"> اصول المراجعة </li>
+                        <br>
+                    <li class="li2"> الحاسبة الادارية </li>
+                        <br>
+                    <li class="li2">   المايلة العامة و الضرائب </li>
+                        <br>
+                    <li class="li2">  الاحصاء التطبيقى  </li>
+                        <br>
+                    <li class="li2"> الموازنات التحطيطية </li>
+                    <br>
+                    <br>
+                    <hr width="150%" color="red">
+                        الفرقة الرابعة :
+                         <ol> الفصل الدراسي الأول: </ol>
+                       <br>
+                        <li class="li2">  الاسواق و المؤسسات المالية   </li>
+                            <br>
+                        <li class="li2"> نظم معلومات محاسبية </li>
+                            <br>
+                        <li class="li2"> محاسبة منشآت متخصصة </li>
+                            <br>
+                        <li class="li2">  الاحصاء المتقدم </li>
+                            <br>
+                        <li class="li2">  تنمية اقتصادية   </li>
+                            <br>
+                        <li class="li2"> مشكلات محاسبية معاصرة </li>
+                            <br>
+                        <ol>   الفصل الدراسي الثاني: </ol>
+                            <br>
+                        <li class="li2"> نظم تكاليف </li>
+                            <br>
+                        <li class="li2"> محاسبة ضريبية </li>
+                            <br>
+                        <li class="li2"> مراجعة متقدمة </li>
+                            <br>
+                        <li class="li2">  بحوث عمليات </li>
+                            <br>
+                        <li class="li2">  اقتصاد تطبيقي  </li>
+                            <br>
+                        <li class="li2">  محاسبة منشات مالية </li>
+                        <br>
+                        <br>
+                <hr width="150%" color="black">
+<span class="A"> شعبة تسويق و تجارة خارجية : </span>
+                <br>
+                <br>
+                <ul>
+                   <ol> الفرقة الأولى :</ol>
+                   <ol>   الفصل الدراسي الأول:</ol>
+                   <br>
+                    <li class="li2"> مبادئ الادارة  </li>
+                        <br>
+                    <li class="li2"> مبادئ المحاسبة | </li>
+                        <br>
+                    <li class="li2"> مبادئ الاقتصاد </li>
+                        <br>
+                    <li class="li2">   الرياضة البحتة* </li>
+                        <br>
+                    <li class="li2">  أصول تسويق  </li>
+                        <br>
+                    <li class="li2">  دراسات اقتصادية باللغة الانجليزية  </li>
+                        <br>
+                    <ol>   الفصل الدراسي الثاني: </ol>
+                        <br>
+                    <li class="li2"> دعايه و أعلان  </li>
+                        <br>
+                    <li class="li2"> محاسبة شركات اشخاص </li>
+                        <br>
+                    <li class="li2"> دراسات تسويقية باللغة الانجليزية || </li>
+                        <br>
+                    <li class="li2">   مبادئ السلوك التنظيمي </li>
+                        <br>
+                    <li class="li2">  مبادئ القانون   </li>
+                        <br>
+                    <li class="li2"> سلوك المستهلك  </li>
+                        <br>
+                        <br>
+                    <hr width="150%" color="red">
+                
+                    الفرقة الثانية :
+                   <ol>   الفصل الدراسي الأول: </ol>
+                   <br>
+                    <li class="li2">  دراسات تسويقية باللغة الانجليزية ||  </li>
+                        <br>
+                    <li class="li2"> تحليل اقتصادى كلى </li>
+                        <br>
+                    <li class="li2"> رياضيات المال و الاستثمار </li>
+                        <br>
+                    <li class="li2">  محاسبة شركات اموال </li>
+                        <br>
+                    <li class="li2">   التسويق و التجارة الالكترونية  </li>
+                        <br>
+                    <li class="li2"> ادارة موارد بشرية </li>
+                        <br>
+                    <ol>   الفصل الدراسي الثاني: </ol>
+                        <br>
+                    <li class="li2"> قانون تجاري </li>
+                        <br>
+                    <li class="li2"> تسويق خدمات </li>
+                        <br>
+                    <li class="li2"> اقتصاديات نقود و بنوك و تجارة خارجية </li>
+                        <br>
+                    <li class="li2">  اقتصاديات حماية البيئة </li>
+                        <br>
+                    <li class="li2">  مقدمة في الطرق الاحصائية  </li>
+                        <br>
+                    <li class="li2">  ادارة اعمال دولية (1) </li>
+                    <br>
+                    <br>
+                    <hr width="150%" color="red">
+                        الفرقة الثالثة :
+                       <ol>الفصل الدراسي الأول: </ol>
+                       <br>
+                        <li class="li2">  مبادئ محاسبة التكاليف </li>
+                            <br>
+                        <li class="li2"> التمويل و الإدارة المالية </li>
+                            <br>
+                        <li class="li2"> المالية العامة و الضرائب </li>
+                            <br>
+                        <li class="li2">  التجارة الخارجية في مصر و مشكلاتها </li>
+                            <br>
+                        <li class="li2">  اقتصاديات التجارة الخارجية (1)  </li>
+                            <br>
+                        <li class="li2">  اقتصاديات و إدارة المشروعات الصغيرة </li>
+                            <br>
+                        <ol>   الفصل الدراسي الثاني: </ol>
+                            <br>
+                        <li class="li2"> اقتصاديات منشآت الأعمال الدولية  </li>
+                            <br>
+                        <li class="li2"> دراسات في الاسواق و البورصات المالية </li>
+                            <br>
+                        <li class="li2"> العلاقات الاقتصادية الدولية (2) </li>
+                            <br>
+                        <li class="li2">   التنمية الاقتصادية و التخطيط </li>
+                            <br>
+                        <li class="li2">  الاحصاء التطبيقى  </li>
+                            <br>
+                        <li class="li2"> محاسبة دولية </li>
+                        <br>
+                        <br>
+                        <hr width="150%" color="red">
+                            الفرقة الرابعة :
+                             <ol> الفصل الدراسي الأول: </ol>
+                           <br>
+                            <li class="li2">  اقتصاديات منشآت الأعمال الدولية   </li>
+                                <br>
+                            <li class="li2"> دراسات في الاسواق و البورصات المالية </li>
+                                <br>
+                            <li class="li2"> العلاقات الاقتصادية الدولية (2) </li>
+                                <br>
+                            <li class="li2">  التنمية الاقتصادية و التخطيط </li>
+                                <br>
+                            <li class="li2">  الاحصاء التطبيقي   </li>
+                                <br>
+                            <li class="li2"> محاسبة دولية </li>
+                                <br>
+                            <ol>   الفصل الدراسي الثاني: </ol>
+                                <br>
+                            <li class="li2"> الضريبة الجمركية و ضريبة المبيعات </li>
+                                <br>
+                            <li class="li2"> التكتلات و المنظات الاقتصادية الدولية </li>
+                                <br>
+                            <li class="li2"> التسويق الدولى (2) </li>
+                                <br>
+                            <li class="li2">  التمويل الدولي </li>
+                                <br>
+                            <li class="li2">  بحوث تسويق  </li>
+                                <br>
+                            <li class="li2">  مشروع التخرج Application Of Computer In Foreign Trade </li>
+                            <br>
+                            <br>
+        </ul>
+        </div>
+    </section>
+
+    <section id="contact1" class="section5">
+        <h2 class="h5">التقديم </h2> <!-- قسم التقديم  -->
+        <div class="INT">
+            <span class="A">الطلاب الجدد</span>
+        <ul>
+            المطلوب :
+            <br>
+            <li class="li3"> أصل شهادة الميلاد بالكمبيوتر  </li>
+                <br>
+            <li class="li3"> أصل المؤهل أو مستخرج رسمي منها .</li>
+                <br>
+            <li class="li3"> صورة من بطاقة الرقم القومي . </li>
+                <br>
+            <li class="li3"> إحضار الرقم السري إذا كان غير مدرج بالشهادة . </li>
+                <br>
+            <li class="li3"> عدد 6 صور شخصية 4×6 </li>
+                <br>
+            <li class="li3"> نموذج 6/2 جند للذكور (19 سنة) من القسم التابع له الطالب لتتمكن إدارة المعهد من تأجيل التجنيد بسن 28 سنة .  </li>
+                <br>
+            <li class="li3"> ملء طلب الإلتحاق بالمعهد موضحا فيه البيانات التي تخص الطالب بالتفصيل . </li>
+        </ul>
+        <br>
+    <ul>
+        شروط القبول :
+        <br>
+        <li class="li3"> الثانوية العامة و ما يعادلها من الشهادات العربية و الأجنبية . </li>
+        <br>
+        <li class="li3"> الثانوية الصناعية 5/3 سنوات . </li>
+        <br>
+        <li class="li3"> الثانوية التجارية 5/3 سنوات . </li>
+        <br>
+        <li class="li3"> الثانوية الفنية للإدارة و الخدمات . </li>
+        <br>
+    </ul>
+        <span class="R">  ( بشرط حصول الطالب على الحد الأدنى المحدد من قبل مكتب التنسيق الخاص بكل شهادة من  الشهادات السابق ذكرها و الذي يتم إعلانها على موقع بوابة الحكومة المصرية و ذلك لكل شعبة من شعب المعهد على حده) </span>
+        <br>
+        <br>
+        <hr width="90%" color="black">
+        <br>
+        <span class="A">الطلاب المحولين</span>
+        <br>
+        يقبل المعهد تحويلات الطلاب المقيدين من سنوات سابقة بالكليات و المعاهد المناظرة / غير المناظرة في كافة شعب المعهد بشرط إستيفاء الحد الأدنى المقرر للقبول بالمعهد سنة حصول الطالب على مؤهله .
+        <br>
+        <br>
+    <ul>
+        شروط القبول :
+        <br>
+        <li class="li3"> أصل بيان حالة من الكلية أو المعهد المراد التحويل منه موضحا به الحالة الدراسية منذ سنة حصوله على المؤهل حتى عام التحويل موضحا به </li>
+        <br>
+        <span class="li3"> التسلسل الدراسي للطالب .  </span>
+        <br>
+        <br>
+        <li class="li3">صورة من المؤهل الدراسي أو بيان درجات .</li>
+        <br>
+        <li class="li3">صورة بطاقة الرقم القومي .</li>
+        <br>
+        <li class="li3">ملء طلب إلتحاق بالمعهد موضحا به كافة البيانات الخاصة بالطالب بالتفصيل و كذلك وسيلة الإتصال به أو بولى الأمر . </li>
+        <br>
+        <li class="li3">يتم تسديد الرسوم الدراسية بعد الموافقة الرسمية من قبل وزارة التعليم العالي على قبول تحويل الطالب .</li>
+        <br>
+        <li class="li3">يقوم المعهد بتشكيل لجنة علمية متخصصة لإعداد المقاصات العلمية للطلاب الراغبين في التحويل الى شعب مناظرة بالمعهد و إرسالها إلى</li>
+        <span class="li3">الإدارة الإدارة المركزية للتعليم الخاص لإعتمادها بشكل رسمى و تحديد الفرقة التي سيلتحق بها الطالب و المواد المحمل بها و من ثم إبلاغ <br>
+        الطالب بنتيجة المقاصة ليتمكن من الإنتظام في الدراسة بالمعهد . </span>
+        <br>
+        <br>
+        <span class="R"> و يشترط لعمل المقاصة أن : </span>
+        <br>
+        <li class="li3">يلتزم الطالب بتقديم بيان حالة موضح به المواد التي قام بدراستها و أجتيازها و المواد التي لم يجتازها مرفق بها المحتوى العلمى الخاص بالمعهد </li>
+        <span class="li3"> و كذلك ايضاً بيان تقديرات و بيان درجات .</span>
+        <br>
+        <br>
+        <li class="li3">إذا تعرض الطالب لإستنفاذ مرات الرسوب بالمعاهد أو الكليات المناظرة / غير المناظرة فيمكن له أن يتقدم للمعهد بأصل شهادة الفصل - أصل </li>
+        <span class="li3"> شهادة المؤهل و ذلك للإلتحاق بالفرقة الأولى بالمعهد بالشعبة التي  تناسب الحد الأدنى المقرر للقبول بالمعهد سنة الطالب على مؤهله
+            <br> و في ذات الوقت تختلف عن التخصص المفصول منه . </span>
+    </ul>
+        <br>
+        <br>
+        <br>
+    <span class="R">المصروفات الدراسية :</span>
+    <br>
+    تسدد المصروفات على ثلاثة أقساط خلال العام الدراسي في المواعيد المحددة من قبل المعهد و في حالة عدم سداد الطالب أي قسط في الموعد المحدد فلن يحصل على الخدمات التعليمية من المعهد ،،،
+    </div>
+    </section>
+
+    <section id="contact2" class="section6">
+        <h2>اللوكيشن </h2> <!-- قسم اللوكيشن  -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d2903.7544349519276!2d31.450185581700385!3d30.060792099858162!3m2!1i1024!2i768!4f13.1!2m1!1z2YTZiNmD2YrYtNmGINmF2LnZh9ivINin2YTZgtin2YfYsdipINin2YTYrNiv2YrYr9ipINin2YTYqtis2YXYuSDYp9mE2KfZiNmE4oCt!5e0!3m2!1sen!2seg!4v1743363980882!5m2!1sen!2seg" width="1000" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    العنوان : القاهرة الجديدة - التجمع الأول - المجاورة السابعة - أمام نادي التجمع الأول بجوار سنترال التجمع الأول
+    </section>
+
+    <section id="contact4" class="section8">
+        <h2 class="h6">  الكتب </h2> <!-- قسم التواصل -->
+        <div class="SJN">
+            <br>
+            <br>
+            <br>
+        <span class="A"> شعبة نظم معلومات إدارية : </span>
+        <br>
+        <br>
+        <ul>
+            الفرقة الثانية :
+                   <ol>   الفصل الدراسي الأول: </ol>
+                   <br>
+                    <a href="books/قواعد البيانات 1.pdf" target="_blank" class="books"><li class="li2"> قواعد بيانات (1) </li> </a>
+                        <br>
+                    <a href="books/البرمجة الهيكلية المتقدمة1.pdf" target="_blank" class="books"><li class="li2"> البرمجة الهيكلية المتقدمة </li></a>
+                        <br>
+                    <a href="books/كتاب محاسبة شركات الأشخاص.pdf" target="_blank" class="books"><li class="li2"> محاسبة شركات </li></a>
+                        <br>
+                    <a href="books/كتاب الإنتاج 2022.pdf" target="_blank" class="books"> <li class="li2">  ادارة الانتاج </li></a>
+                        <br>
+                    <a href="books/القانون التجارى شرح.pdf" target="_blank" class="books"><li class="li2">   قانون تجاري  </li></a>
+                        <br>
+                    <a href="books/Economics studies.pdf" target="_blank" class="books"><li class="li2"> دراسات اقتصادية باللغة الانجليزية </li></a>
+                        <br>
+                    <ol>   الفصل الدراسي الثاني: </ol>
+                        <br>
+                    <a href="books/نظم المعلومات الإدارية- 2021.pdf" target="_blank" class="books"><li class="li2"> نظم المعلومات الادارية  </li></a>
+                        <br>
+                    <a href="books/تطبيقات الإنترنت والوسائط المتعددة2021.pdf" target="_blank" class="books"><li class="li2"> تطبيقات الانترنت و الوسائط المتعددة </li></a>
+                        <br>
+                    <a href="books/تسويق.pdf" target="_blank" class="books"><li class="li2">  تسويق  </li></a>
+                        <br>
+                    <a href="books/رياضيات التمويل والاستثمار-1.pdf" target="_blank" class="books"><li class="li2">  رياضيات التمويل </li></a>
+                        <br>
+                    <a href="books/كتاب اساسيات الاحصاء.pdf" target="_blank" class="books"><li class="li2">  احصاء  </li></a>
+                        <br>
+                    <a href="books/Economics studies.pdf" target="_blank" class="books"><li class="li2">  دراسات اقتصادية باللغة الانجليزية </li></a>
+        </ul>
+    </div>
+    </section>
+
+
+
+
+
+    <section id="contact" class="section7">
+        <h2 class="h7">  للتواصل 📞</h2> <!-- قسم التواصل -->
+    <div >
+        <a href="https://www.facebook.com/share/1DHWwNGnAH/" target="_blank" ><img src="ChatGPT Image 31 مارس 2025، 01_49_23 م.png" alt="fac" class="fac"></a>
+        <a href="https://m.youtube.com/channel/UCBy22ifgyVnAS3fcATA4JLQ/videos" target="_blank" ><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"  alt="YouTube" class="you"></a>
+        <a href="https://t.me/nciedueg" target="_blank" ><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"  alt="Telegram" class="tel"></a>
+        <a href="https://www.instagram.com/nci_edu_eg/?utm_source=ig_web_button_share_sheet" target="_blank" ><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="ins"></a>
+        <a href="NCInstitute2002@gmail.com" target="_blank" ><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" width="50" alt="Gmail" class="gma"></a>
+        <ul>
+        <span class="W">أرقام التواصل : </span>
+            <br>
+           <li class="li4"> 22461112 </li>
+            <br>
+            <li class="li4">22461113 </li>
+            <br>
+            <li class="li4">22461114 </li>
+            <br>
+            <li class="li4">22461115 </li>
+            <br>
+            <li class="li4"> 22461116 </li>
+            <br>
+            <li class="li4"> 22461455 </li>
+            <br>
+            <br>
+            <br>
+        
+        <span class="WO"> مواعيد العمل : </span>
+            <br>
+           <span class="word"> السبت إلى الخميس الساعة 9:30 ص إلى 4:30 م </span>
+        
+    </ul>
+    </div>
+    </section>
+
+
+
+
+    <footer>
+        <p>&copy; 2025 معهد القاهرة الجديدة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
